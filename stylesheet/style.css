@@ -1,0 +1,496 @@
+/* CSS declarations go here */
+/* CSS declarations go here */
+body{background-color: #eceaea;}
+a:link{text-decoration: none};
+a:hover{text-decoration: none};
+p{
+  font-size: 1.10em;
+  margin: 0;
+  line-height: 2em;
+  text-align: left;
+}
+
+*{
+  border-radius: 0 !important;
+  font-family: 'Proxima Nova Alt', 'Proxima Nova', 'proxima-nova', sans-serif;
+  outline: 0 none !important;
+}
+
+.dent p{
+  text-align: center;
+}
+
+.spaceing {
+  letter-spacing: 0.03em;
+
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.cent
+{
+  width: 30.5em;
+  height: 80%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.cent p {
+  text-align: left;
+}
+
+.dent {
+  max-width: 30.5em;
+  height: 35%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.dent-main {
+  max-width: 30.5em;
+  height: 20%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.cent-problem-page {
+  width: 30.5em;
+  height: 85%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.cent-problem-page h3 {
+  font-size: 1.2em;
+  letter-spacing: 0.03em;
+  line-height: 1.5em;
+  padding: 0em;
+  margin: 0.3em 0em;
+}
+
+
+
+.button-align {
+  max-width: 30em;
+  width: 90%;
+  display: inline-block;
+}
+
+.problem-item{
+  max-width: 10em;
+}
+
+.problemPage input[type="submit"] {
+  margin-bottom: 2em;
+}
+
+.problemPage .main-heading h1{
+  margin-bottom:  1em !important;
+}
+
+.magictime {
+-webkit-animation-duration: 0.5s;
+-moz-animation-duration: 0.5s;
+-o-animation-duration: 0.5s;
+animation-duration: 0.5s;
+}
+
+.hidden {
+  display: none;
+}
+
+.back-btn {
+  margin: 6em 0em;
+  background-color: #eceaea;
+}
+
+.cent .back-btn {
+  margin: 2em 0em;
+  background-color: #eceaea;
+}
+
+.btn-success {
+  text-shadow: 0 -0.05em 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 -0.7em rgba(0, 0, 0, 0.35);
+}
+
+.btn-primary {
+  text-shadow: 0 -0.05em 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 -0.7em rgba(0, 0, 0, 0.35);
+}
+
+.btn-sample { 
+  color: #FFFFFF; 
+  background-color: #ff2f29; 
+  text-shadow: 0 -0.05em 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 -0.7em rgba(0, 0, 0, 0.35);
+}
+ 
+.btn-sample:hover, 
+.btn-sample:focus, 
+.btn-sample:active, 
+.btn-sample.active, 
+.open .dropdown-toggle.btn-sample { 
+  color: #FFFFFF; 
+  background-color: #ea1c16 ; 
+} 
+ 
+.btn-sample:active, 
+.btn-sample.active, 
+.open .dropdown-toggle.btn-sample { 
+  background-image: none; 
+} 
+ 
+.btn-sample.disabled, 
+.btn-sample[disabled], 
+fieldset[disabled] .btn-sample, 
+.btn-sample.disabled:hover, 
+.btn-sample[disabled]:hover, 
+fieldset[disabled] .btn-sample:hover, 
+.btn-sample.disabled:focus, 
+.btn-sample[disabled]:focus, 
+fieldset[disabled] .btn-sample:focus, 
+.btn-sample.disabled:active, 
+.btn-sample[disabled]:active, 
+fieldset[disabled] .btn-sample:active, 
+.btn-sample.disabled.active, 
+.btn-sample[disabled].active, 
+fieldset[disabled] .btn-sample.active { 
+  background-color: #ea1c16 ; 
+  border-color: #000000; 
+} 
+ 
+.btn-sample .badge { 
+  color: #f00d06; 
+  background-color: #FFFFFF; 
+}
+
+
+.break-el{
+    -ms-word-break: break-all;
+    word-break: break-all;
+
+ /* Non standard for webkit */
+     word-break: break-word;
+
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+}
+
+input {
+  display: block !important;
+  width: 100%;
+  min-height: 4.2em;
+  border: 0px solid !important;
+  max-width: 25em;
+  font-size: 1.25em !important;
+  font-weight: 400 !important;
+  text-align: center !important;
+  letter-spacing: 0.04em;
+}
+
+input[type="text"] {
+  color:#000;
+  letter-spacing: 0.02em;
+}
+
+input[type="button"] {
+  color: #fff;
+  min-height: 5.1em;
+}
+
+input[type="submit"] {
+  color: #fff;
+  min-height: 5.1em;
+}
+
+.list-group-item {
+  width: 30.5em;
+  display: inline-block;
+  border-style: solid;
+  border-bottom-width: 0.145em !important;
+  border-bottom-color: #929292 !important;
+  border: 0px solid;
+  padding: 1.3em 1em 0.9em;
+}
+
+.problems {
+  display: inline-block;
+  max-width: 30em;
+  min-width: 30em;
+  min-height: 6em;
+  border-style: solid;
+  border-bottom-width: 0.145em !important;
+  border-bottom-color: #929292 !important;
+  border: 0px solid;
+  padding: 0.5em;
+  background-color: #fff;
+}
+
+.problems h3 {
+  line-height: 1.25em;
+  }
+
+.problem-items {
+  font-size: 1em;
+  text-align: center;
+}
+
+.problem-items h3 {
+  font-size: 1.2em;
+
+}
+
+.problem-items .list-group-item {
+  max-width: 30em !important;
+}
+
+.main-heading-solution h1 {
+  font-size: 2.8em;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  margin: 1.2em 0em 1em;
+  letter-spacing: 0.03em;
+}
+
+.main-heading-problems h1 {
+  font-size: 2.5em;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  margin: 1em 0em 1em;
+  letter-spacing: 0.03em;
+}
+
+
+@media (min-width: 1300px) { 
+
+.container{
+    width: 65%;
+}
+
+input {
+  max-width: 25em;
+}
+
+p{
+  font-size: 1.12em;
+}
+
+.main-heading h1 {
+  font-size: 3.5em;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  margin: 2em 0em 1.5em;
+  letter-spacing: 0.03em;
+}
+
+
+}
+
+@media (min-width: 1100px) and (max-width: 1299px) { 
+.container{
+    width: 65%;
+  }
+
+.main-heading h1 {
+  font-size: 2.8em;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  margin: 2.5em 0em 1.5em;
+  letter-spacing: 0.03em;
+}
+
+
+}
+
+@media (min-width: 950px) and (max-width: 1099px) { 
+.container{
+    width: 70%;
+  }
+
+.main-heading h1 {
+  font-size: 2.8em;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  margin: 2em 0em 1.5em;
+  letter-spacing: 0.03em;
+}
+  
+}
+
+@media (min-width: 770px) and (max-width: 949px) { 
+.container{
+    width: 70%;
+  }
+
+.main-heading h1 {
+  font-size: 2.5em;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  margin: 2em 0em 1.5em;
+  letter-spacing: 0.03em;
+}
+
+
+
+}
+
+@media (min-width: 430px) and (max-width: 769px) { 
+
+.container{
+  padding: 0em;
+}
+
+.main-heading-problems{
+  background-color: #fff;
+}
+
+.main-heading {
+  background-color: #fff;
+}
+
+.main-heading-solution{
+  background-color: #fff;
+}
+
+
+.main-heading h1 {
+  font-size: 2em;
+  color: #000;
+  font-weight: 400;
+  text-align: center;
+  margin: 0em 0em 1em;
+  letter-spacing: 0.03em;
+  padding: 0.3em;
+}
+
+.main-heading-solution h1 {
+  font-size: 2em;
+  color: #000;
+  font-weight: 400;
+  text-align: center;
+  margin: 0em 0em 1em;
+  letter-spacing: 0.03em;
+  padding: 0.3em;
+}
+
+.main-heading-problems h1 {
+  font-size: 2em;
+  color: #000;
+  font-weight: 400;
+  text-align: center;
+  margin: 0em 0em 1em;
+  letter-spacing: 0.03em;
+  padding: 0.3em;
+}
+
+.mobile-hide {
+  display: none;
+}
+
+}
+
+@media (min-width: 0px) and (max-width: 429px) { 
+
+.main-heading {
+  background-color: #fff;
+}
+
+.main-heading-solution{
+  background-color: #fff;
+}
+
+.main-heading-problems{
+  background-color: #fff;
+}
+
+.mobile-hide {
+  display: none;
+}
+
+.container{
+  padding: 0em;
+}
+.main-heading h1 {
+  font-size:1.6em;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  margin: 0em 0em 1em;
+  letter-spacing: 0.08em;
+  padding: 0.5em;
+}
+
+.main-heading-solution h1 {
+  font-size:1.6em;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  margin: 0em 0em 1em;
+  letter-spacing: 0.08em;
+  padding: 0.5em;
+}
+
+.main-heading-problems h1 {
+  font-size:1.6em;
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  margin: 0em 0em 1em;
+  letter-spacing: 0.08em;
+  padding: 0.5em;
+}
+
+.back-btn {
+  margin: 2em 0em;
+}
+
+.list-group-item {
+  max-width: 100%;
+  margin-left: 0 auto;
+}
+
+.cent {
+  width: 90%;
+  height: 70%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.cent-problem-page {
+  width:  90%;
+  height: 90%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.dent-main {
+  padding: 0em 1em;
+}
+
+.dent {
+  padding: 0em 1em;
+}
+.problems {
+  width: 90%;
+  min-width: 0em;
+}
+
+
+}

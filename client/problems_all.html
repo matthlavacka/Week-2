@@ -1,0 +1,18 @@
+<template name="problemsAll">
+	
+	<div class="main-heading-problems">
+		<h1>Problems</h1>
+	</div>
+	<div class="text-center">
+	<div class="button-align">
+		<input type="button" onclick="window.location.href = '/';" id="submit-problem-page" name="submit-problem-page" class="btn btn-sample" value="Ask 5 why">
+	</div>
+	<div>
+		{{#each problems}}
+			{{> problemItem}}
+		{{/each}}
+	
+	</div>
+</div>
+
+</template>
