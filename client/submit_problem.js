@@ -9,11 +9,11 @@ Template.submitProblem.events({
     } else {
       alert("You need to enter problem");
     }
-  }
-  
-});
+  },
+  'keyup input#problem':function(event) {
+    Session.set("problem", event.target.value);
+  },
 
-Template.submitProblem.events({
   'click .answer1':function() {
     if (why1.value != '') {
     //show/hide items with removeClass()/addClass()
@@ -23,10 +23,11 @@ Template.submitProblem.events({
     } else {
       alert("You need to answer why is it problem");
     }
-  }
-});
+  },
+  'keyup input#why1':function(event) {
+    Session.set("why1", event.target.value);
+  },
 
-Template.submitProblem.events({
   'click .answer2':function() {
     if (why2.value != '') {
     //show/hide items with removeClass()/addClass()
@@ -36,10 +37,11 @@ Template.submitProblem.events({
     } else {
       alert("You need to answer why is it problem");
     }
-  }
-});
+  }, 
+  'keyup input#why2':function(event) {
+    Session.set("why2", event.target.value);
+  },
 
-Template.submitProblem.events({
   'click .answer3':function() {
     if (why3.value != '') {
     //show/hide items with removeClass()/addClass()
@@ -49,10 +51,12 @@ Template.submitProblem.events({
     } else {
       alert("You need to answer why is it problem");
     }
-  }
-});
+  },
 
-Template.submitProblem.events({
+  'keyup input#why3':function(event) {
+    Session.set("why3", event.target.value);
+  },
+
   'click .answer4':function() {
     if (why4.value != '') {
     //show/hide items with removeClass()/addClass()
@@ -62,12 +66,13 @@ Template.submitProblem.events({
     } else {
       alert("You need to answer why is it problem");
     }
-  }
-});
+  },
+  'keyup input#why4':function(event) {
+    Session.set("why4", event.target.value);
+  },
 
-Template.submitProblem.events({
   'click .answer5':function() {
-    if (why4.value != '') {
+    if (why5.value != '') {
     //show/hide items with removeClass()/addClass()
     $('.part7').addClass('magictime swashIn');
     $('#submit-why5').addClass('hidden');
@@ -75,59 +80,48 @@ Template.submitProblem.events({
     } else {
       alert("You need to answer why is it problem");
     }
-  }
-});
+  },
 
+  'keyup input#why5':function(event) {
+    Session.set("why5", event.target.value);
+  },
 
-Template.submitProblem.events({
   'click .back1':function() {
     //show/hide items with removeClass()/addClass()
     $('#submit-why1').addClass('hidden');
     $('#submit-problem').removeClass('hidden');
-  }
-});
+  },
 
-Template.submitProblem.events({
   'click .back2':function() {
     //show/hide items with removeClass()/addClass()
     $('#submit-why2').addClass('hidden');
     $('#submit-why1').removeClass('hidden');
-  }
-});
+  },
 
-Template.submitProblem.events({
   'click .back3':function() {
     //show/hide items with removeClass()/addClass()
     $('#submit-why3').addClass('hidden');
     $('#submit-why2').removeClass('hidden');
-  }
-});
+  },
 
-Template.submitProblem.events({
   'click .back4':function() {
     //show/hide items with removeClass()/addClass()
     $('#submit-why4').addClass('hidden');
     $('#submit-why3').removeClass('hidden');
-  }
-});
+  },
 
-Template.submitProblem.events({
   'click .back5':function() {
     //show/hide items with removeClass()/addClass()
     $('#submit-why5').addClass('hidden');
     $('#submit-why4').removeClass('hidden');
-  }
-});
+  },
 
-Template.submitProblem.events({
   'click .back6':function() {
     //show/hide items with removeClass()/addClass()
     $('#submit-solution').addClass('hidden');
     $('#submit-why5').removeClass('hidden');
-  }
-});
+  },
 
-Template.submitProblem.events({
   'submit form':function(event) {
     event.preventDefault();
 
@@ -142,55 +136,25 @@ Template.submitProblem.events({
     submitdate: new Date()
     };
 
-    post._id = Problems.insert(post);
-    console.log(post._id);
-    Session.set('current_post', post._id);
-    Router.go('problemPage', post);
+    Meteor.call('insertProblem', post, function(error,result) {
+        if(!error){
+          console.log(result)
+          console.log(result._id)
+          Router.go('problemPage', result); //it may work to with the + operator
+        }
+    });
+    /*post._id = Problems.insert(post);
+    Router.go('problemPage', post);*/
   }
 });
 
-
-Template.submitProblem.helpers({
-  problem: function() {
-    return Session.get("problem");
-  },
-  why1: function() {
-    return Session.get("why1");
-  },
-  why2: function() {
-    return Session.get("why2");
-  },
-  why3: function() {
-    return Session.get("why3");
-  },
-  why4: function() {
-    return Session.get("why4");
-  },
-  why5: function() {
-    return Session.get("why5");
-  }
-});
-
-Template.submitProblem.events({
-  'keyup input#problem':function(event) {
-    Session.set("problem", event.target.value);
-  },
-  'keyup input#why1':function(event) {
-    Session.set("why1", event.target.value);
-  },
-  'keyup input#why2':function(event) {
-    Session.set("why2", event.target.value);
-  },
-  'keyup input#why3':function(event) {
-    Session.set("why3", event.target.value);
-  },
-  'keyup input#why4':function(event) {
-    Session.set("why4", event.target.value);
-  },
-  'keyup input#why5':function(event) {
-    Session.set("why5", event.target.value);
-  }
-});
+Session.setDefault("name", "");
+Session.setDefault("why1", "");
+Session.setDefault("why2", "");
+Session.setDefault("why3", "");
+Session.setDefault("why4", "");
+Session.setDefault("why5", "");
+Session.setDefault("solution", "");
 
 
 

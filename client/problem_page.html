@@ -17,6 +17,6 @@
 				<li class="list-group-item">
 					<h3>Solution - {{postSolution}}</h3>
 				</li>
-			<input type="button" onclick="window.location.href = '/problems';" id="problem-page-back" name="problem-page-back" class="btn btn-sample" value="All problems">
+			<a href="{{pathFor 'problemsAll'}}"><input type="button" id="problem-page-back" name="problem-page-back" class="btn btn-sample" value="All problems"></a>
 	</div>
 </template>

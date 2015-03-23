@@ -5,13 +5,12 @@
 	</div>
 	<div class="text-center">
 	<div class="button-align">
-		<input type="button" onclick="window.location.href = '/';" id="submit-problem-page" name="submit-problem-page" class="btn btn-sample" value="Ask 5 why">
+		<a href="{{pathFor 'submitProblem'}}"><input type="button" id="submit-problem-page" name="submit-problem-page" class="btn btn-sample" value="Ask 5 why"></a>
 	</div>
 	<div>
 		{{#each problems}}
 			{{> problemItem}}
 		{{/each}}
-	
 	</div>
 </div>
 
